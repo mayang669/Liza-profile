@@ -1,0 +1,173 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('308428.jpg');
+    color: #e6ccff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Profile Section */
+.profile {
+    margin-bottom: 30px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    animation: blink 2.5s infinite alternate;
+}
+
+/* Text styling */
+h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #e27ae2;
+    animation: entryEffect 2s ease-in-out;
+}
+
+
+p {
+    font-size: 1rem;
+    color: #f2eff3;
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    font-size: 1.8rem;
+    color: #e27ae2;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #09ecb7;
+}
+
+.social-icons a i.fa-user {
+    font-size: 2rem;
+}
+
+/* Projects Section */
+.projects-section {
+    margin-top: 50px;
+}
+
+.projects-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #e6ccff;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: #0f011d;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: entryEffect 2s ease-in-out;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #e6ccff;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #d9b3ff;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: transparent;
+}
+h2{
+    color:#d9b3ff;
+}
+
+/* Animations */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes entryEffect {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
